@@ -9,6 +9,11 @@
 import Foundation
 
 class Player {
-    var playerID: Int = 0
-    var playerName: String = ""
+    var playerID: Int
+    var playerName: String
+    
+    init(pName: String) {
+        self.playerID = 0
+        self.playerName = pName
+    }
 }

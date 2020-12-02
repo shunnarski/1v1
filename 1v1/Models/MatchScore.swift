@@ -9,8 +9,15 @@
 import Foundation
 
 class MatchScore {
-    var matchScoreID: Int = 0
-    var matchupID: Int = 0
-    var player1Score: Int = 0
-    var player2Score: Int = 0
+    var matchScoreID: Int
+    var matchupID: Int
+    var player1Score: Int
+    var player2Score: Int
+    
+    init(p1Score: Int, p2Score: Int) {
+        self.player1Score = p1Score
+        self.player2Score = p2Score
+        self.matchScoreID = 0
+        self.matchupID = 0
+    }
 }

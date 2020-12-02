@@ -10,7 +10,41 @@ import SwiftUI
 
 struct MatchInfoView: View {
     var body: some View {
-        Text("Match Info")
+        TabView {
+            GraphView()
+             .tabItem {
+                Image(systemName: "phone.fill")
+                Text("Graphs")
+            }
+            TableView()
+              .tabItem {
+                Image(systemName: "tv.fill")
+                Text("Table")
+            }
+            MediaView()
+              .tabItem {
+                Image(systemName: "heart.fill")
+                Text("Media")
+            }
+        }
+    }
+}
+
+struct GraphView: View {
+    var body: some View {
+        Text("The content of the first view CHANGED")
+    }
+}
+
+struct TableView: View {
+    var body: some View {
+        Text("The content of the second view CHANGED")
+    }
+}
+
+struct MediaView: View {
+    var body: some View {
+        Text("The content of the third view CHANGED")
     }
 }
 

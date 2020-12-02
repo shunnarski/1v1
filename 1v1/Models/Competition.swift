@@ -9,6 +9,12 @@
 import Foundation
 
 class Competition {
-    var competitionID: Int = 0
-    var competitionName: String = ""
+    var competitionID: Int
+    var competitionName: String
+    
+    init(cName: String) {
+        self.competitionID = 0
+        self.competitionName = cName
+    }
+    
 }
