@@ -36,11 +36,7 @@ struct MatchView: View {
                         }
                     }
                 }
-                Button(action: {
-                    // what to perform
-                    print("Button was pressed!")
-                }) {
-                    // button design
+                NavigationLink(destination: MatchInfoView()) {
                     Text("Next")
                         .font(.title)
                 }
