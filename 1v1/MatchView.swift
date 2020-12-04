@@ -14,16 +14,19 @@ struct MatchView: View {
     @State private var selectedComp = 0
     @State private var selectedP1 = 0
     @State private var selectedP2 = 1
+    @State private var hasScoresToggle = true
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 20) {
-                Text("Match Settings")
-                    .font(.system(size: 29))
+                    
                 Form {
                     Picker(selection: $selectedComp, label: Text("Competition")) {
                         ForEach(0 ..< self.competitions.count) {
                             Text(self.competitions[$0])
                         }
+                    }
+                    Toggle(isOn: $hasScoresToggle) {
+                        Text("Has Scores")
                     }
                     Picker(selection: $selectedP1, label: Text("Player 1")) {
                         ForEach(0..<self.players.count) {
@@ -41,6 +44,7 @@ struct MatchView: View {
                         .font(.title)
                 }
             }
+            .navigationBarTitle("Match Settings")
         }
         
         

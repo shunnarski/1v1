@@ -11,17 +11,17 @@ import SwiftUI
 struct MatchInfoView: View {
     var body: some View {
         TabView {
-            GraphView()
+            GraphTabView()
              .tabItem {
                 Image(systemName: "phone.fill")
                 Text("Graphs")
             }
-            TableView()
+            TableTabView()
               .tabItem {
                 Image(systemName: "tv.fill")
                 Text("Table")
             }
-            MediaView()
+            MediaTabView()
               .tabItem {
                 Image(systemName: "heart.fill")
                 Text("Media")
@@ -30,21 +30,21 @@ struct MatchInfoView: View {
     }
 }
 
-struct GraphView: View {
+struct GraphTabView: View {
     var body: some View {
-        Text("The content of the first view CHANGED")
+        GraphView()
     }
 }
 
-struct TableView: View {
+struct TableTabView: View {
     var body: some View {
-        Text("The content of the second view CHANGED")
+        TableView()
     }
 }
 
-struct MediaView: View {
+struct MediaTabView: View {
     var body: some View {
-        Text("The content of the third view CHANGED")
+        MediaView()
     }
 }
 
