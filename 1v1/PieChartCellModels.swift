@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-
+// struct of the data we're passing to the pie chart
 struct ChartCellModel: Identifiable {
     let id = UUID()
     let color: Color
@@ -19,8 +19,8 @@ struct ChartCellModel: Identifiable {
 
 final class ChartDataModel: ObservableObject {
     var chartCellModel: [ChartCellModel]
-    var startingAngle = Angle(degrees: 0)
-    private var lastBarEndAngle = Angle(degrees: 0)
+    var startingAngle = Angle(degrees: 90)
+    private var lastBarEndAngle = Angle(degrees: 90)
     
         
     init(dataModel: [ChartCellModel]) {
